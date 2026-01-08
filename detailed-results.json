@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "timestamp": "2026-01-08T02:26:41.224Z",
+    "version": "1.0.0",
+    "totalPackages": 1,
+    "totalLenses": 1
+  },
+  "results": [
+    {
+      "package": {
+        "name": "flowchart",
+        "path": ""
+      },
+      "lens": {
+        "id": "eslint",
+        "command": "lint"
+      },
+      "execution": {
+        "success": false,
+        "exitCode": 1,
+        "duration": 1687,
+        "timestamp": 1767839201223
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    }
+  ],
+  "qualityMetrics": {
+    "packages": [
+      {
+        "name": "flowchart",
+        "path": "",
+        "hexagon": {
+          "tests": 0,
+          "deadCode": 0,
+          "formatting": 0,
+          "linting": 0,
+          "types": 0,
+          "documentation": 0
+        },
+        "lensesRan": [
+          "eslint"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "pv": {
+    "name": "Ralph Architecture",
+    "version": "1.0.0"
+  },
+  "nodes": [
+    {
+      "id": "ralph",
+      "type": "text",
+      "x": 414,
+      "y": -45,
+      "width": 180,
+      "height": 80,
+      "color": "#FF6B6B",
+      "text": "# Ralph\n\n**Autonomous Agent Loop**\n\nMain bash script that orchestrates the autonomous development loop",
+      "pv": {
+        "nodeType": "ralph",
+        "shape": "rounded",
+        "icon": "🤖"
+      }
+    },
+    {
+      "id": "amp",
+      "type": "text",
+      "x": 308,
+      "y": 133,
+      "width": 140,
+      "height": 86,
+      "color": "#4ECDC4",
+      "text": "# Amp CLI\n\nAI code generation tool that executes each iteration",
+      "pv": {
+        "nodeType": "amp",
+        "shape": "diamond",
+        "icon": "⚡"
+      }
+    },
+    {
+      "id": "prd",
+      "type": "text",
+      "x": 603,
+      "y": 154,
+      "width": 140,
+      "height": 60,
+      "color": "#45B7D1",
+      "text": "# PRD\n\n**prd.json**\n\nUser stories with completion status",
+      "pv": {
+        "nodeType": "prd",
+        "shape": "document",
+        "icon": "📋"
+      }
+    },
+    {
+      "id": "progress",
+      "type": "text",
+      "x": 843,
+      "y": 251,
+      "width": 140,
+      "height": 60,
+      "color": "#96CEB4",
+      "text": "# Progress Log\n\n**progress.txt**\n\nAppend-only learnings and context for future iterations",
+      "pv": {
+        "nodeType": "progress",
+        "shape": "document",
+        "icon": "📝"
+      }
+    },
+    {
+      "id": "git",
+      "type": "text",
+      "x": 352,
+      "y": 296,
+      "width": 140,
+      "height": 60,
+      "color": "#F0F0F0",
+      "text": "# Git Repository\n\nVersion control and persistent memory",
+      "pv": {
+        "nodeType": "git",
+        "shape": "cylinder",
+        "icon": "🔀"
+      }
+    },
+    {
+      "id": "typecheck",
+      "type": "text",
+      "x": 296,
+      "y": 425,
+      "width": 128,
+      "height": 90,
+      "color": "#FFB6C1",
+      "text": "# TypeCheck\n\nType validation quality gate",
+      "pv": {
+        "nodeType": "typecheck",
+        "shape": "diamond",
+        "icon": "🔍"
+      }
+    },
+    {
+      "id": "tests",
+      "type": "text",
+      "x": 452,
+      "y": 423,
+      "width": 132,
+      "height": 90,
+      "color": "#98D8C8",
+      "text": "# Tests\n\nAutomated test suite validation",
+      "pv": {
+        "nodeType": "tests",
+        "shape": "diamond",
+        "icon": "🧪"
+      }
+    },
+    {
+      "id": "prd_skill",
+      "type": "text",
+      "x": 492,
+      "y": 84,
+      "width": 120,
+      "height": 60,
+      "color": "#FECA57",
+      "text": "# PRD Skill\n\nGenerate requirements documents",
+      "pv": {
+        "nodeType": "prd_skill",
+        "shape": "hexagon",
+        "icon": "🎯"
+      }
+    },
+    {
+      "id": "ralph_skill",
+      "type": "text",
+      "x": 715,
+      "y": 86,
+      "width": 120,
+      "height": 60,
+      "color": "#DDA0DD",
+      "text": "# Ralph Skill\n\nConvert PRD to JSON format",
+      "pv": {
+        "nodeType": "ralph_skill",
+        "shape": "hexagon",
+        "icon": "🔄"
+      }
+    },
+    {
+      "id": "flowchart",
+      "type": "text",
+      "x": 136,
+      "y": 78,
+      "width": 140,
+      "height": 60,
+      "color": "#87CEEB",
+      "text": "# Flowchart\n\nInteractive React Flow diagram",
+      "pv": {
+        "nodeType": "flowchart",
+        "shape": "document",
+        "icon": "📊"
+      }
+    },
+    {
+      "id": "agents",
+      "type": "text",
+      "x": 855,
+      "y": 373,
+      "width": 120,
+      "height": 60,
+      "color": "#D3D3D3",
+      "text": "# AGENTS.md\n\nDiscovered patterns and instructions",
+      "pv": {
+        "nodeType": "agents",
+        "shape": "document",
+        "icon": "📖"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "ralph-executes-amp",
+      "fromNode": "ralph",
+      "toNode": "amp",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "executes",
+      "pv": {
+        "edgeType": "executes"
+      }
+    },
+    {
+      "id": "ralph-triggers-loop",
+      "fromNode": "ralph",
+      "toNode": "ralph",
+      "fromSide": "right",
+      "toSide": "right",
+      "label": "iterates",
+      "pv": {
+        "edgeType": "triggers"
+      }
+    },
+    {
+      "id": "amp-reads-prd",
+      "fromNode": "amp",
+      "toNode": "prd",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "reads stories",
+      "pv": {
+        "edgeType": "reads"
+      }
+    },
+    {
+      "id": "amp-updates-prd",
+      "fromNode": "amp",
+      "toNode": "prd",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "label": "marks complete",
+      "pv": {
+        "edgeType": "updates"
+      }
+    },
+    {
+      "id": "amp-commits-git",
+      "fromNode": "amp",
+      "toNode": "git",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "commits changes",
+      "pv": {
+        "edgeType": "communicates"
+      }
+    },
+    {
+      "id": "git-validates-typecheck",
+      "fromNode": "git",
+      "toNode": "typecheck",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "validates",
+      "pv": {
+        "edgeType": "validates"
+      }
+    },
+    {
+      "id": "git-validates-tests",
+      "fromNode": "git",
+      "toNode": "tests",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "validates",
+      "pv": {
+        "edgeType": "validates"
+      }
+    },
+    {
+      "id": "ralph-reads-progress",
+      "fromNode": "ralph",
+      "toNode": "progress",
+      "fromSide": "right",
+      "toSide": "top",
+      "label": "reads context",
+      "pv": {
+        "edgeType": "reads"
+      }
+    },
+    {
+      "id": "prd_skill-creates-prd",
+      "fromNode": "prd_skill",
+      "toNode": "prd",
+      "fromSide": "right",
+      "toSide": "top",
+      "label": "creates",
+      "pv": {
+        "edgeType": "writes"
+      }
+    },
+    {
+      "id": "ralph_skill-converts-prd",
+      "fromNode": "ralph_skill",
+      "toNode": "prd",
+      "fromSide": "left",
+      "toSide": "top",
+      "label": "converts to JSON",
+      "pv": {
+        "edgeType": "updates"
+      }
+    },
+    {
+      "id": "progress-updates-agents",
+      "fromNode": "progress",
+      "toNode": "agents",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "updates patterns",
+      "pv": {
+        "edgeType": "updates"
+      }
+    },
+    {
+      "id": "flowchart-documents-system",
+      "fromNode": "flowchart",
+      "toNode": "ralph",
+      "fromSide": "top",
+      "toSide": "left",
+      "label": "visualizes",
+      "pv": {
+        "edgeType": "documents"
+      }
+    },
+    {
+      "id": "ralph-depends-prd",
+      "fromNode": "ralph",
+      "toNode": "prd",
+      "fromSide": "right",
+      "toSide": "top",
+      "label": "depends on",
+      "pv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge-amp-progress-1767838984897",
+      "fromNode": "amp",
+      "toNode": "progress",
+      "fromSide": "bottom",
+      "toSide": "left",
+      "pv": {
+        "edgeType": "writes"
+      }
+    },
+    {
+      "id": "edge-amp-git-1767838984898",
+      "fromNode": "amp",
+      "toNode": "git",
+      "fromSide": "left",
+      "toSide": "left",
+      "pv": {
+        "edgeType": "depends_on"
+      }
+    }
+  ]
+}

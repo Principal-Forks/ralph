@@ -1,0 +1,147 @@
+version: "1.0.0"
+name: "Ralph Architecture Component Library"
+
+nodeComponents:
+  # Core Components
+  ralph:
+    description: "Main Ralph autonomous agent loop"
+    color: "#FF6B6B"
+    icon: "🤖"
+    tags: ["core", "bash"]
+    shape: "rounded"
+    
+  amp:
+    description: "Amp CLI tool for AI code generation"
+    color: "#4ECDC4"
+    icon: "⚡"
+    tags: ["core", "cli", "external"]
+    shape: "diamond"
+      
+  # Data Components
+  prd:
+    description: "Product Requirements Document with user stories"
+    color: "#45B7D1"
+    icon: "📋"
+    tags: ["data", "json"]
+    shape: "document"
+      
+  progress:
+    description: "Append-only progress log with learnings"
+    color: "#96CEB4"
+    icon: "📝"
+    tags: ["data", "text"]
+    shape: "document"
+      
+  # Skills
+  prd_skill:
+    description: "PRD generation skill for Amp"
+    color: "#FECA57"
+    icon: "🎯"
+    tags: ["skill", "generation"]
+    shape: "hexagon"
+      
+  ralph_skill:
+    description: "Ralph conversion skill for PRD to JSON"
+    color: "#DDA0DD"
+    icon: "🔄"
+    tags: ["skill", "conversion"]
+    shape: "hexagon"
+      
+  # Version Control
+  git:
+    description: "Git version control system"
+    color: "#F0F0F0"
+    icon: "🔀"
+    tags: ["infrastructure", "vcs"]
+    shape: "cylinder"
+      
+  # Quality Assurance
+  typecheck:
+    description: "Type checking validation"
+    color: "#FFB6C1"
+    icon: "🔍"
+    tags: ["quality", "validation"]
+    shape: "diamond"
+      
+  tests:
+    description: "Automated test suite"
+    color: "#98D8C8"
+    icon: "🧪"
+    tags: ["quality", "validation"]
+    shape: "diamond"
+      
+  # Project Structure
+  flowchart:
+    description: "Interactive React Flow visualization"
+    color: "#87CEEB"
+    icon: "📊"
+    tags: ["documentation", "visualization"]
+    shape: "document"
+      
+  agents:
+    description: "Agent instructions and patterns"
+    color: "#D3D3D3"
+    icon: "📖"
+    tags: ["documentation", "patterns"]
+    shape: "document"
+
+edgeComponents:
+  # Control Flow
+  executes:
+    description: "Executes or runs a component"
+    color: "#2C3E50"
+    style: "solid"
+    directed: true
+    
+  triggers:
+    description: "Triggers or initiates an action"
+    color: "#E74C3C"
+    style: "solid"
+    directed: true
+    
+  # Data Flow
+  reads:
+    description: "Reads data from a component"
+    color: "#3498DB"
+    style: "dashed"
+    directed: true
+    
+  writes:
+    description: "Writes data to a component"
+    color: "#27AE60"
+    style: "dashed"
+    directed: true
+    
+  updates:
+    description: "Updates data in a component"
+    color: "#F39C12"
+    style: "dashed"
+    directed: true
+    
+  # Communication
+  communicates:
+    description: "Communicates with external system"
+    color: "#9B59B6"
+    style: "solid"
+    directed: true
+    
+  # Dependencies
+  depends_on:
+    description: "Component depends on another"
+    color: "#95A5A6"
+    style: "dotted"
+    directed: true
+    
+  # Quality Flow
+  validates:
+    description: "Validates or checks component"
+    color: "#E67E22"
+    style: "solid"
+    directed: true
+    
+  # Documentation
+  documents:
+    description: "Documents or describes component"
+    color: "#16A085"
+    style: "dashed"
+    directed: false

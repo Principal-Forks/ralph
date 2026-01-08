@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "timestamp": "2026-01-08T02:33:24.184Z",
+    "version": "1.0.0",
+    "totalPackages": 1,
+    "totalLenses": 7
+  },
+  "results": [
+    {
+      "package": {
+        "name": "flowchart",
+        "path": "flowchart"
+      },
+      "lens": {
+        "id": "eslint",
+        "command": "lint"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 0,
+        "duration": 1959,
+        "timestamp": 1767839595645
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    },
+    {
+      "package": {
+        "name": "flowchart",
+        "path": "flowchart"
+      },
+      "lens": {
+        "id": "eslint",
+        "command": "lint:fix"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 0,
+        "duration": 1896,
+        "timestamp": 1767839597542
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    },
+    {
+      "package": {
+        "name": "flowchart",
+        "path": "flowchart"
+      },
+      "lens": {
+        "id": "prettier",
+        "command": "format"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 0,
+        "duration": 719,
+        "timestamp": 1767839598261
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    },
+    {
+      "package": {
+        "name": "flowchart",
+        "path": "flowchart"
+      },
+      "lens": {
+        "id": "prettier",
+        "command": "format:check"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 0,
+        "duration": 612,
+        "timestamp": 1767839598873
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    },
+    {
+      "package": {
+        "name": "flowchart",
+        "path": "flowchart"
+      },
+      "lens": {
+        "id": "vitest",
+        "command": "test"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 0,
+        "duration": 2132,
+        "timestamp": 1767839601005
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    },
+    {
+      "package": {
+        "name": "flowchart",
+        "path": "flowchart"
+      },
+      "lens": {
+        "id": "vitest",
+        "command": "test:ui"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 0,
+        "duration": 2513,
+        "timestamp": 1767839603518
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    },
+    {
+      "package": {
+        "name": "flowchart",
+        "path": "flowchart"
+      },
+      "lens": {
+        "id": "vitest",
+        "command": "test:coverage"
+      },
+      "execution": {
+        "success": false,
+        "exitCode": 1,
+        "duration": 664,
+        "timestamp": 1767839604182
+      },
+      "issues": [],
+      "metrics": {},
+      "qualityContext": {}
+    }
+  ],
+  "qualityMetrics": {
+    "packages": [
+      {
+        "name": "flowchart",
+        "path": "flowchart",
+        "hexagon": {
+          "tests": 100,
+          "deadCode": 0,
+          "formatting": 100,
+          "linting": 100,
+          "types": 0,
+          "documentation": 0
+        },
+        "lensesRan": [
+          "eslint",
+          "prettier",
+          "vitest"
+        ]
+      }
+    ]
+  }
+}
