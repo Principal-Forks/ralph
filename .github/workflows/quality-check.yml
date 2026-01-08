@@ -31,9 +31,12 @@ jobs:
       run: |
         cd flowchart
         npm run lint
-    - name: Upload coverage
+    - name: Upload quality results
       uses: actions/upload-artifact@v4
       with:
-        name: coverage-report
-        path: flowchart/coverage/
+        name: quality-results-${{ github.sha }}
+        path: |
+          flowchart/test-results.txt
+          flowchart/lint-results.txt
+          flowchart/format-results.txt
         if-no-files-found: warn
